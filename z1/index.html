@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zara Cargo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <img src="images/zaralogo.png" alt="Zara Cargo Logo" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="zaracargo2.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">ZARA CARGO</h1>
+            <p class="hero-text">NEW ERA OF SHIPPING TO BRING THE WORLD CLOSER TO NEW DESTINATIONS</p>
+            <div class="btn-group">
+                <button class="btn primary" onclick="window.location.href='contact.html'">Contact Us</button>
+                <button class="btn" onclick="window.location.href='follow.html'">Follow Us</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Zara Cargo. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

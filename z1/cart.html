@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zara Cargo - Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <img src="images/zaralogo.png" alt="Zara Cargo Logo" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                     <li><a href="follow.html">Follow Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="cart">
+        <h1 class="cart-title">OUR SHOPPG LIST</h1>
+        <div class="cart-content">
+            <!-- Cart Items -->
+            <div class="cart-items">
+            </div>
+
+            <!-- Brands Section -->
+            <div class="brands-section">
+                <!-- Perfumes Brands -->
+                <h2 class="brands-title">Perfume Brands</h2>
+                <div class="brands-grid">
+                    <!-- Brand 1 -->
+                    <a href="https://3saf.com/ar" target="_blank" class="brand-card">
+                        <img src="images/3saf.jpg" alt="3SAFLOG" class="brand-logo">
+                    </a>
+
+                    <!-- Brand 2 -->
+                    <a href="https://sa.arabianoud.com/ar" target="_blank" class="brand-card">
+                        <img src="images/arabian-oud.jpg" alt="ARABIANOUTLOG" class="brand-logo">
+                    </a>
+
+                    <!-- Brand 3 -->
+                    <a href="https://banafaforoud.com/ar/" target="_blank" class="brand-card">
+                        <img src="images/banafa-foroud.jpg" alt="banfaLog" class="brand-logo">
+                    </a>
+                    <!-- Brand 4 -->
+                     <a href="https://dkhoonemirates.com/" target="_blank" class="brand-card">
+                        <img src="images/dkhoon-emirates.jpg" alt="dkhoonLog" class="brand-logo">
+                    </a>
+                    <!-- Brand 5 -->
+                     <a href="https://sa.gissah.com/" target="_blank" class="brand-card">
+                        <img src="images/gissah.jpg" alt="gissahLog" class="brand-logo">
+                    </a>
+                    <!-- Brand 6 -->
+                     <a href="https://saudi.ibrahimalqurashi.com/ar" target="_blank" class="brand-card">
+                        <img src="images/ibrahim-al-qurashi.jpg" alt="ibrahimalqurashiLog" class="brand-logo">
+                    </a>
+                    <!-- Brand 7 -->
+                     <a href="https://matchperfumes.com/" target="_blank" class="brand-card">
+                        <img src="images/match-perfumes.jpg" alt="matchaLogo" class="brand-logo">
+                    </a>
+                    <!-- Brand 8 -->
+                     <a href="https://noir-perfume.com/dPmRVad" target="_blank" class="brand-card">
+                        <img src="images/noir-perfume.jpg" alt="noirLog" class="brand-logo">
+                    </a>
+                    <!-- Brand 9 -->
+                     <a href="https://oudamoudi.com/" target="_blank" class="brand-card">
+                        <img src="images/oudamoudi.jpg" alt="oudmoudiLog" class="brand-logo">
+                    </a>
+
+                    <!-- Add more perfume brands here -->
+                </div>
+
+                <!-- Middle Header -->
+                <h2 class="brands-title middle-header">Clothing Brands</h2>
+
+                <!-- Clothes Brands -->
+                <div class="brands-grid">
+                    <!-- Brand 1 -->
+                    <a href="https://islamkmsa.com/" target="_blank" class="brand-card">
+                        <img src="images/islamkmsa.jpg" alt="islamlog" class="brand-logo">
+                    </a>
+
+                    <!-- Brand 2 -->
+                    <a href="https://levasaudi.com/" target="_blank" class="brand-card">
+                        <img src="images/levasaudi.jpg" alt="levasLogo" class="brand-logo">
+                    </a>
+
+                    <!-- Brand 3 -->
+                    <a href="https://taraashop.com/" target="_blank" class="brand-card">
+                        <img src="images/taraashop.jpg" alt="tarraLog" class="brand-logo">
+                    </a>
+                    <!-- Brand 4 -->
+                    <a href="https://salla.sa/mtgr-rabab" target="_blank" class="brand-card">
+                        <img src="images/salla-mtgr-rabab.jpg" alt="sallarabablog" class="brand-logo">
+                    </a>
+                    <!-- Brand 5 -->
+                    <a href="https://salla.sa/hno011" target="_blank" class="brand-card">
+                        <img src="images/salla-hno011.jpg" alt="sallalog" class="brand-logo">
+                    </a>
+                    <!-- Brand 6 -->
+                    <a href="https://www.trendyol.com/ar" target="_blank" class="brand-card">
+                        <img src="images/trendyol.jpg" alt="trendyollog" class="brand-logo">
+                    </a>
+                    <!-- Brand 7 -->
+                    <a href="https://ar.shein.com/" target="_blank" class="brand-card">
+                        <img src="images/shein.jpg" alt="sheinlog" class="brand-logo">
+                    </a>
+
+                    <!-- Add more clothing brands here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Zara Cargo. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

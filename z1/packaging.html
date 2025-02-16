@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packaging - Zara Cargo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <img src="images/zaralogo.png" alt="Zara Cargo Logo" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="follow.html">Follow Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="service-details">
+        <h1>Packaging</h1>
+        <p>
+            At Zara Cargo, we understand that proper packaging is essential for the safe and secure transportation of your goods. 
+            Our <strong>Packaging Services</strong> are designed to protect your items during transit, ensuring they arrive in perfect condition. 
+            Whether you’re shipping fragile items, bulky goods, or high-value products, we’ve got you covered.
+        </p>
+        <img src="images/packaging.jpg" alt="Packaging">
+        
+        <h2>Why Choose Our Packaging Services?</h2>
+        <p>
+            Our packaging services are designed to provide maximum protection and efficiency. Here’s what makes us stand out:
+        </p>
+        <ul>
+            <li><strong>Custom Packaging Solutions:</strong> We tailor our packaging to meet the specific needs of your goods, ensuring optimal protection.</li>
+            <li><strong>High-Quality Materials:</strong> We use durable, eco-friendly materials to safeguard your items during transit.</li>
+            <li><strong>Expert Handling:</strong> Our team is trained to handle fragile, bulky, and high-value items with care.</li>
+            <li><strong>Cost-Effective:</strong> Competitive pricing for professional packaging services.</li>
+            <li><strong>Global Standards:</strong> Our packaging meets international shipping standards, ensuring compliance and safety.</li>
+        </ul>
+
+        <h2>Benefits of Our Packaging Services</h2>
+        <p>
+            When you choose Zara Cargo’s Packaging Services, you’re choosing reliability and peace of mind. Here are some of the benefits:
+        </p>
+        <ul>
+            <li><strong>Protection:</strong> Your goods are protected from damage during transit, reducing the risk of losses.</li>
+            <li><strong>Efficiency:</strong> Proper packaging ensures faster and smoother handling of your shipments.</li>
+            <li><strong>Customization:</strong> Tailored packaging solutions to meet your unique requirements.</li>
+            <li><strong>Eco-Friendly Options:</strong> We offer sustainable packaging materials to reduce environmental impact.</li>
+            <li><strong>Peace of Mind:</strong> Know that your items are securely packaged and ready for safe delivery.</li>
+        </ul>
+
+        <h2>Who Can Benefit from Our Packaging Services?</h2>
+        <p>
+            Our Packaging Services are ideal for:
+        </p>
+        <ul>
+            <li><strong>Businesses:</strong> Companies that need professional packaging for their products, whether fragile, bulky, or high-value.</li>
+            <li><strong>E-commerce:</strong> Online retailers who require secure packaging for customer orders.</li>
+            <li><strong>Manufacturers:</strong> Businesses that need bulk packaging for raw materials or finished products.</li>
+            <li><strong>Individuals:</strong> Personal packaging solutions for valuable items, gifts, or fragile goods.</li>
+            <li><strong>Art and Antiques:</strong> Specialized packaging for delicate or high-value items like artwork and collectibles.</li>
+        </ul>
+
+        <h2>How to Get Started</h2>
+        <p>
+            Getting started with Zara Cargo’s Packaging Services is easy. Simply contact our team to discuss your needs, and we’ll create a 
+            customized packaging plan for you. Whether you need one-time packaging or ongoing support, we’re here to help.
+        </p>
+        <div class="btn-group">
+            <button class="btn primary" onclick="window.location.href='contact.html'">Contact Us</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Zara Cargo. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

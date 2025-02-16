@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Flight Express - Zara Cargo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <img src="images/zaralogo.png" alt="Zara Cargo Logo" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="follow.html">Follow Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="service-details">
+        <h1>Air Flight Express</h1>
+        <p>
+            At Zara Cargo, we understand that time is of the essence when it comes to shipping. 
+            That’s why we offer <strong>Air Flight Express</strong>, a fast and reliable air shipping service designed to meet your urgent delivery needs. 
+            Whether you’re shipping documents, perishable goods, or high-value items, our Air Flight Express ensures your cargo reaches its destination quickly and securely.
+        </p>
+        <img src="images/air-freight.jpg" lt="Air Flight Express">
+        
+        <h2>Why Choose Air Flight Express?</h2>
+        <p>
+            Our Air Flight Express service is designed for clients who need their goods delivered as quickly as possible. 
+            Here’s what makes us stand out:
+        </p>
+        <ul>
+            <li><strong>Speedy Delivery:</strong> We use the fastest air routes and logistics solutions to ensure your shipments arrive on time.</li>
+            <li><strong>Global Network:</strong> With operations in over 100 countries, we can deliver your goods anywhere in the world.</li>
+            <li><strong>Real-Time Tracking:</strong> Track your shipment in real-time with our advanced tracking system.</li>
+            <li><strong>Secure Handling:</strong> Your goods are handled with the utmost care and security throughout the shipping process.</li>
+            <li><strong>Flexible Options:</strong> Choose from a variety of air shipping options to meet your specific needs.</li>
+        </ul>
+
+        <h2>Benefits of Air Flight Express</h2>
+        <p>
+            When you choose Zara Cargo’s Air Flight Express, you’re choosing reliability and efficiency. Here are some of the benefits:
+        </p>
+        <ul>
+            <li><strong>Time-Saving:</strong> Get your goods delivered faster, so you can focus on what matters most.</li>
+            <li><strong>Cost-Effective:</strong> Competitive pricing for fast and reliable air shipping services.</li>
+            <li><strong>Customer Support:</strong> Our team is available 24/7 to assist you with any questions or concerns.</li>
+            <li><strong>Custom Solutions:</strong> Tailored air shipping solutions to meet your unique requirements.</li>
+            <li><strong>Peace of Mind:</strong> Know that your goods are in safe hands from pickup to delivery.</li>
+        </ul>
+
+        <h2>Who Can Benefit from Air Flight Express?</h2>
+        <p>
+            Our Air Flight Express service is ideal for:
+        </p>
+        <ul>
+            <li><strong>Businesses:</strong> Companies that need to ship products quickly to meet customer demands.</li>
+            <li><strong>E-commerce:</strong> Online retailers who require fast and reliable delivery for their customers.</li>
+            <li><strong>Individuals:</strong> Anyone who needs to send packages quickly and securely.</li>
+            <li><strong>Time-Sensitive Shipments:</strong> Urgent documents, medical supplies, or other time-critical items.</li>
+            <li><strong>Perishable Goods:</strong> Fast delivery for perishable items like food, flowers, or pharmaceuticals.</li>
+        </ul>
+
+        <h2>How to Get Started</h2>
+        <p>
+            Getting started with Zara Cargo’s Air Flight Express is easy. Simply contact our team to discuss your needs, and we’ll create a 
+            customized shipping plan for you. Whether you need one-time air shipping or ongoing support, we’re here to help.
+        </p>
+        <div class="btn-group">
+            <button class="btn primary" onclick="window.location.href='contact.html'">Contact Us</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Zara Cargo. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

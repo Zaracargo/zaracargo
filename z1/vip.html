@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Services - Zara Cargo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <img src="images/zaralogo.png" alt="Zara Cargo Logo" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="follow.html">Follow Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="service-details">
+        <h1>VIP Services</h1>
+        <p>
+            At Zara Cargo, we understand that some shipments require special attention and priority handling. 
+            That’s why we offer <strong>VIP Services</strong> tailored to meet the needs of our most discerning clients. 
+            Whether you’re shipping high-value goods, time-sensitive documents, or personal items, our VIP Services 
+            ensure that your cargo receives the utmost care and priority.
+        </p>
+        <img src="images/vip-services.jpg" alt="VIP Services">
+        
+        <h2>Why Choose VIP Services?</h2>
+        <p>
+            Our VIP Services are designed for clients who demand the best. Here’s what sets us apart:
+        </p>
+        <ul>
+            <li><strong>Priority Handling:</strong> Your shipments are given top priority at every stage of the logistics process, from pickup to delivery.</li>
+            <li><strong>Dedicated Support:</strong> A personal account manager is assigned to handle all your shipping needs, ensuring seamless communication and service.</li>
+            <li><strong>Exclusive Tracking:</strong> Real-time tracking with detailed updates, so you always know the status of your shipment.</li>
+            <li><strong>Custom Solutions:</strong> Tailored shipping solutions to meet your specific requirements, including special packaging and handling instructions.</li>
+            <li><strong>Global Reach:</strong> We operate in over 100 countries, ensuring your shipments reach their destination no matter where they’re headed.</li>
+        </ul>
+
+        <h2>Benefits of VIP Services</h2>
+        <p>
+            When you choose Zara Cargo’s VIP Services, you’re not just getting faster shipping—you’re getting a premium experience. 
+            Here are some of the benefits you can expect:
+        </p>
+        <ul>
+            <li><strong>Faster Delivery:</strong> Expedited shipping options to ensure your goods arrive as quickly as possible.</li>
+            <li><strong>Enhanced Security:</strong> High-value items are handled with extra care and security measures to prevent damage or loss.</li>
+            <li><strong>Flexible Scheduling:</strong> We work around your schedule to provide pickup and delivery times that suit your needs.</li>
+            <li><strong>24/7 Customer Support:</strong> Our VIP support team is available around the clock to assist you with any inquiries or issues.</li>
+            <li><strong>Confidentiality:</strong> Discreet handling of sensitive or confidential shipments to protect your privacy.</li>
+        </ul>
+
+        <h2>Who Can Benefit from VIP Services?</h2>
+        <p>
+            Our VIP Services are ideal for:
+        </p>
+        <ul>
+            <li><strong>Businesses:</strong> Companies shipping high-value products, sensitive documents, or time-critical items.</li>
+            <li><strong>Individuals:</strong> Personal shipments of luxury goods, gifts, or important personal items.</li>
+            <li><strong>E-commerce:</strong> Online retailers who need fast and reliable shipping for their premium customers.</li>
+            <li><strong>Art and Antiques:</strong> Specialized handling for fragile or high-value items like artwork and collectibles.</li>
+        </ul>
+
+        <h2>How to Get Started</h2>
+        <p>
+            Getting started with Zara Cargo’s VIP Services is easy. Simply contact our team to discuss your needs, and we’ll create a 
+            customized shipping plan for you. Whether you need one-time VIP service or ongoing support, we’re here to help.
+        </p>
+        <div class="btn-group">
+            <button class="btn primary" onclick="window.location.href='contact.html'">Contact Us</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Zara Cargo. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

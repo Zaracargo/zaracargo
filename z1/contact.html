@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Zara Cargo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your existing CSS -->
+    <style>
+        /* General Styles */
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        /* Additional styles for the Contact Us page */
+        .contact-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(https://cdn.pixabay.com/photo/2016/09/14/09/34/port-1669023_1280.jpg);
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .contact-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .contact-hero p {
+            font-size: 1.2rem;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap; /* Ensure responsiveness */
+        }
+
+        .contact-form {
+            flex: 1;
+            margin-right: 40px;
+            animation: slideInLeft 1s ease-in-out;
+            min-width: 300px; /* Ensure form doesn't get too small */
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .contact-info {
+            flex: 1;
+            animation: slideInRight 1s ease-in-out;
+            min-width: 300px; /* Ensure info section doesn't get too small */
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            color: #007BFF;
+            font-size: 2rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-5px);
+            color: #0056b3;
+        }
+
+        /* WhatsApp Chat Widget */
+        .whatsapp-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .whatsapp-button {
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+        }
+
+        .whatsapp-chat-box {
+            width: 300px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            display: none;
+            animation: slideUp 0.5s ease;
+        }
+
+        .whatsapp-header {
+            background: #25D366;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .whatsapp-body {
+            padding: 15px;
+        }
+
+        .whatsapp-body input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .whatsapp-body button {
+            width: 100%;
+            padding: 10px;
+            background: #25D366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-body button:hover {
+            background: #128C7E;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto; /* Ensures footer stays at the bottom */
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-form {
+                margin-right: 0;
+                margin-bottom: 40px;
+            }
+
+            .contact-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-hero p {
+                font-size: 1rem;
+            }
+
+            .whatsapp-chat-box {
+                width: 90%;
+                right: 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <img src="images/zaralogo.png" alt="Zara Cargo Logo" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                   <li><a href="follow.html">Follow Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <h1>Contact Us</h1>
+            <p>We're here to help! Reach out to us for any inquiries or support.</p>
+        </section>
+
+        <!-- Contact Form and Info -->
+        <div class="contact-container">
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form action="https://formspree.io/f/xbjvnqzv" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- WhatsApp Chat Widget -->
+        <div class="whatsapp-widget">
+            <div class="whatsapp-button" onclick="toggleWhatsAppChat()">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="whatsapp-chat-box" id="whatsappChatBox">
+                <div class="whatsapp-header">
+                    Chat with Us
+                </div>
+                <div class="whatsapp-body">
+                    <input type="text" id="whatsappMessage" placeholder="Type your message...">
+                    <button onclick="sendWhatsAppMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Zara Cargo. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for WhatsApp Chat Widget
+        function toggleWhatsAppChat() {
+            const chatBox = document.getElementById('whatsappChatBox');
+            chatBox.style.display = chatBox.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function sendWhatsAppMessage() {
+            const message = document.getElementById('whatsappMessage').value;
+            if (message.trim() !== "") {
+                const whatsappUrl = `https://wa.me/+218926525252?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+            }
+        }
+
+        // JavaScript for animations or additional functionality
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

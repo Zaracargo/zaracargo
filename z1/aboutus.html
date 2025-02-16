@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zara Cargo - About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <img src="images/zaralogo.png" alt="Zara Cargo Logo" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                     <li><a href="follow.html">Follow Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="about">
+        <h1 class="about-title">About Us</h1>
+        <div class="about-content">
+            <div class="about-text">
+                <p class="about-description">
+                    At Zara Cargo, we are dedicated to revolutionizing the shipping industry. With years of experience, we bring the world closer by providing fast, reliable, and secure cargo services to destinations worldwide. Our mission is to make global shipping seamless and accessible for everyone.
+                </p>
+                <div class="contact-info">
+                    <h2 class="contact-title">Contact Information</h2>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Shipping Lane, Cargo City, CA 90210, USA</li>
+                        <li><i class="fas fa-phone"></i> +1 (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@zaracargo.com</li>
+                        <li><i class="fas fa-mail-bulk"></i> Postcode: 90210</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about-map">
+              <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d214406.9921060287!2d13.002423278124999!3d32.89527960000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13a8ed361db7e633%3A0xab179ffd06bb3be6!2sDhat%20El-Imad%20Complex!5e0!3m2!1sen!2sly!4v1739604607526!5m2!1sen!2sly"
+    width="100%"
+    height="400"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Zara Cargo. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

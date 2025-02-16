@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zara Cargo - Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <img src="images/zaralogo.png" alt="Zara Cargo Logo" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="follow.html">Follow Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="services">
+        <h1 class="services-title">Our Services</h1>
+        <div class="services-grid">
+            <!-- Service Card 1 -->
+            <div class="service-card">
+                <div class="card-icon">
+                    <i class="fas fa-shipping-fast"></i>
+                </div>
+                <h2 class="card-title">Fast Shipping</h2>
+                <p class="card-text">We deliver your cargo quickly and safely to any destination worldwide.</p>
+                <a href="fastshiping.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div class="service-card">
+                <div class="card-icon">
+                    <i class="fas fa-warehouse"></i>
+                </div>
+                <h2 class="card-title">Warehousing</h2>
+                <p class="card-text">Secure and spacious warehousing solutions for your goods.</p>
+                <a href="Warehousing.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div class="service-card">
+                <div class="card-icon">
+                    <i class="fas fa-box-open"></i>
+                </div>
+                <h2 class="card-title">Packaging</h2>
+                <p class="card-text">Professional packaging services to ensure your items are safe during transit.</p>
+                <a href="packaging.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+
+            <!-- VIP Services Section -->
+            <div class="service-card">
+                <div class="card-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h2 class="card-title">VIP Services</h2>
+                <p class="card-text">Exclusive services tailored for our VIP clientele, ensuring utmost priority and care.</p>
+                <a href="vip.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Air Express Section -->
+            <div class="service-card">
+                <div class="card-icon">
+                    <i class="fas fa-plane"></i>
+                </div>
+                <h2 class="card-title">Air Express</h2>
+                <p class="card-text">Fast air transport services for urgent shipments, ensuring timely deliveries.</p>
+                <a href="airexpess.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Zara Cargo. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

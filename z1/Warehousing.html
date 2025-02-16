@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehousing - Zara Cargo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <img src="images/zaralogo.png" alt="Zara Cargo Logo" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="follow.html">Follow Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="service-details">
+        <h1>Warehousing</h1>
+        <p>
+            At Zara Cargo, we offer state-of-the-art <strong>Warehousing Solutions</strong> to meet your storage needs. 
+            Whether you need short-term storage for seasonal inventory or long-term solutions for bulk goods, 
+            our secure and spacious facilities are designed to keep your products safe and accessible.
+        </p>
+        <img src="images/warehousing.jpg" alt="Warehousing">
+        
+        <h2>Why Choose Our Warehousing Services?</h2>
+        <p>
+            Our warehousing services are designed to provide flexibility, security, and efficiency. Here’s what makes us stand out:
+        </p>
+        <ul>
+            <li><strong>Secure Facilities:</strong> Our warehouses are equipped with advanced security systems, including 24/7 surveillance and access control.</li>
+            <li><strong>Climate Control:</strong> We offer climate-controlled storage options to protect sensitive goods from temperature and humidity fluctuations.</li>
+            <li><strong>Flexible Storage Options:</strong> Choose from short-term or long-term storage plans tailored to your business needs.</li>
+            <li><strong>Inventory Management:</strong> Our team provides real-time inventory tracking and management to ensure your goods are always accounted for.</li>
+            <li><strong>Strategic Locations:</strong> Our warehouses are strategically located near major transportation hubs for easy access and faster distribution.</li>
+        </ul>
+
+        <h2>Benefits of Our Warehousing Services</h2>
+        <p>
+            When you choose Zara Cargo’s Warehousing Services, you’re choosing reliability and efficiency. Here are some of the benefits:
+        </p>
+        <ul>
+            <li><strong>Cost-Effective:</strong> Competitive pricing for secure and reliable storage solutions.</li>
+            <li><strong>Scalability:</strong> Easily scale your storage space up or down based on your business needs.</li>
+            <li><strong>Expert Support:</strong> Our team is available to assist you with inventory management and logistics planning.</li>
+            <li><strong>Peace of Mind:</strong> Know that your goods are stored in a secure and well-maintained facility.</li>
+            <li><strong>Fast Access:</strong> Quick and easy access to your inventory whenever you need it.</li>
+        </ul>
+
+        <h2>Who Can Benefit from Our Warehousing Services?</h2>
+        <p>
+            Our Warehousing Services are ideal for:
+        </p>
+        <ul>
+            <li><strong>Businesses:</strong> Companies that need secure storage for inventory, raw materials, or finished goods.</li>
+            <li><strong>E-commerce:</strong> Online retailers who require flexible storage solutions for their products.</li>
+            <li><strong>Manufacturers:</strong> Businesses that need bulk storage for raw materials or finished products.</li>
+            <li><strong>Distributors:</strong> Companies that require strategic storage locations for efficient distribution.</li>
+            <li><strong>Individuals:</strong> Personal storage solutions for valuable items or seasonal goods.</li>
+        </ul>
+
+        <h2>How to Get Started</h2>
+        <p>
+            Getting started with Zara Cargo’s Warehousing Services is easy. Simply contact our team to discuss your needs, and we’ll create a 
+            customized storage plan for you. Whether you need short-term or long-term storage, we’re here to help.
+        </p>
+        <div class="btn-group">
+            <button class="btn primary" onclick="window.location.href='contact.html'">Contact Us</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Zara Cargo. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
